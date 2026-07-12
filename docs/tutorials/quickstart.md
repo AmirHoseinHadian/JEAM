@@ -1,6 +1,6 @@
 # Quick Start: Circular Diffusion Model
 
-This tutorial demonstrates how to simulate data from a **Circular Diffusion Model (CDM)** and recover model parameters using likelihood-based estimation with CRDDM.
+This tutorial demonstrates how to simulate data from a **Circular Diffusion Model (CDM)** and recover model parameters using likelihood-based estimation with JEAM.
 
 ## 1. Import required packages
 
@@ -16,8 +16,8 @@ import matplotlib.pyplot as plt
 # Optimization
 from scipy.optimize import differential_evolution
 
-# CRDDM model
-from CRDDM.Models.Circular import CircularDiffusionModel as CDM
+# JEAM model
+from jeam.Models.Circular import CircularDiffusionModel as CDM
 ```
 
 ## 2. Create a circular diffusion model

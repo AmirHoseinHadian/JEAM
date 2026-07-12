@@ -2,7 +2,7 @@
 
 Mixture process models are an important class of cognitive models for continuous-response tasks, and they have been widely used in the visual working memory literature. These models assume that observed responses arise from a mixture of distinct cognitive processes, such as memory-based responding and random guessing.
 
-This tutorial demonstrates how to fit **mixture models** within the CRDDM framework. Specifically, we implement a **two-component mixture model** for continuous-report visual working memory tasks, inspired by the seminal work of [Zhang and Luck (2008)](https://doi.org/10.1038/nature06860).
+This tutorial demonstrates how to fit **mixture models** within the JEAM framework. Specifically, we implement a **two-component mixture model** for continuous-report visual working memory tasks, inspired by the seminal work of [Zhang and Luck (2008)](https://doi.org/10.1038/nature06860).
 
 In a typical visual working memory task, participants are asked to memorize the features (e.g., colors) of a set of stimuli. After a brief retention period, they are cued to report the remembered feature of one item by responding on a continuous response scale as below:
 
@@ -25,8 +25,8 @@ import matplotlib.pyplot as plt
 
 from scipy.optimize import differential_evolution
 
-from CRDDM.utility.datasets import load_fennell2023
-from CRDDM.Models.Circular import CircularDiffusionModel as CDM
+from jeam.utility.datasets import load_fennell2023
+from jeam.Models.Circular import CircularDiffusionModel as CDM
 ```
 
 ---
@@ -347,7 +347,7 @@ plt.show()
 
 - Mixture models can also be used to account for **multimodal response-error distributions**, as observed in continuous-report tasks (e.g., [Bays et al, 2009](https://doi.org/10.1167/9.10.7)).
 
-- CRDDM supports straightforward implementation of mixture models with **more than two components**, and this framework generalizes naturally to richer mixture structures and alternative cognitive process assumptions.
+- JEAM supports straightforward implementation of mixture models with **more than two components**, and this framework generalizes naturally to richer mixture structures and alternative cognitive process assumptions.
 
 ---
 

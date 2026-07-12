@@ -2,14 +2,14 @@
 
 This guide explains:
 
-1. What type of data is required to use CRDDM models.
-2. Which CRDDM model is appropriate for different response geometries.
+1. What type of data is required to use models implemented in JEAM.
+2. Which model is appropriate for different response geometries.
 
 ---
 
 ## 1. What Data Do You Need?
 
-CRDDM implements diffusion models that jointly explain **response time (RT)** and **continuous response location** and assume that response times reflect **evidence accumulation dynamics**.
+JEAM implements multi-dimensional diffusion models that jointly explain **response time (RT)** and **continuous response location** and assume that response times reflect **evidence accumulation process**.
 Therefore, to use these models appropriately, your dataset must contain:
 
 - **Response time (RT)** for each decision  
@@ -17,7 +17,7 @@ Therefore, to use these models appropriately, your dataset must contain:
 
 Each row of your dataset should correspond to a single trial.
 
-!!! warning "CRDDM may *not* be appropriate if:"
+!!! warning "JEAM may *not* be appropriate if:"
 
     - The response scale was not continuous
     - Response times were not recorded.
@@ -29,7 +29,7 @@ Each row of your dataset should correspond to a single trial.
 
 ## 2. Model Selection by Response Scale
 
-CRDDM provides different diffusion models depending on the geometry of the response scale.
+JEAM provides different diffusion models depending on the geometry of the response scale.
 
 ### A. Circular Response Scales
 
@@ -85,7 +85,7 @@ Use when responses are continuous in 2D and bounded within a region.
 
 ## 3. Quick Model Selection Table
 
-| Response Geometry          | Example Task                          | CRDDM Model                                                 |
+| Response Geometry          | Example Task                          | Suitable Model in JEAM                                      |
 |----------------------------|---------------------------------------|-------------------------------------------------------------|
 | Circular (1D wrapped)      | Color or orientation judgement        | `CircularDiffusionModel`                                    |
 | Circular (1D wrapped)      | Random dot motion                     | `SphericalDiffusionModel` or `HyperSphericalDiffusionModel` |
@@ -96,7 +96,7 @@ Use when responses are continuous in 2D and bounded within a region.
 
 ## 4. Summary
 
-CRDDM is appropriate when:
+JEAM is appropriate when:
 
 - The response scale is continuous.
 - You have trial-level RTs.

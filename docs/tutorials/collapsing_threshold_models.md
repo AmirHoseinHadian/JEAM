@@ -1,6 +1,6 @@
 # Collapsing Threshold Models: A Parameter Recovery Simulation
 
-This tutorial illustrates how to use CRDDM to fit **collapsing threshold diffusion models** and to fit a joint model on observed data from multiple sources (e.g., behavior and neural signals). 
+This tutorial illustrates how to use JEAM to fit **collapsing threshold diffusion models** and to fit a joint model on observed data from multiple sources (e.g., behavior and neural signals). 
 
 This tutorial contains a simple **parameter recovery** study using **Circular Diffusion Model (CDM)** with a
 **linear collapsing decision threshold**. We considered two setups for parameter recovery:
@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
 
 from scipy.optimize import differential_evolution
 
-from CRDDM.Models.Circular import CircularDiffusionModel as CDM
+from jeam.Models.Circular import CircularDiffusionModel as CDM
 ```
 
 ## 1. Uninformed collapsing threshold diffusion models:

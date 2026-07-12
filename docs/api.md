@@ -4,18 +4,18 @@ This reference is generated automatically from the package docstrings via **mkdo
 
 ## Top-level package
 
-::: CRDDM
+::: jeam
 
 ## Models
 
 ### Circular diffusion model
 
-::: CRDDM.Models.Circular
+::: jeam.Models.Circular
 
 ### Spherical diffusion models
 
-::: CRDDM.Models.Spherical
+::: jeam.Models.Spherical
 
 ### Hyper-spherical diffusion models
 
-::: CRDDM.Models.HyperSpherical
+::: jeam.Models.HyperSpherical

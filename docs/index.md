@@ -1,14 +1,14 @@
-# CRDDM
+# JEAM
 
 ## **Overview**
-CRDDM is a Python package for modeling continuous-response decision tasks using **Continuous-Response Diffusion Decision Models (CRDDM)**.
+JEAM is a Python package for evidence accumulation modeling of continuous judgment tasks.
 
-The package provides fast and numerically stable likelihood evaluation for continuous-response diffusion models based on the integral equation method proposed by [Hadian Rasanan et al. (2025)](https://doi.org/10.3758/s13428-025-02810-3). 
+The package provides fast and numerically stable likelihood evaluation for multi-dimensional diffusion models based on the integral equation method proposed by [Hadian Rasanan et al. (2025)](https://doi.org/10.3758/s13428-025-02810-3). 
 
-CRDDM is designed for researchers in **cognitive science**, **mathematical psychology**, and **neuroscience** who study decision-making with continuous-response spaces. 
+JEAM is designed for researchers in **cognitive science**, **mathematical psychology**, and **neuroscience** who study decision-making with continuous-response spaces. 
 
 !!! Note "Required data: response time and response location"
-    CRDDM implements diffusion-based models that jointly explain **response times** and
+    JEAM implements diffusion-based models that jointly explain **response times** and
     **continuous response locations**. To use these models appropriately, your dataset must include:
 
     - a response time (RT) for each decision, and  
@@ -25,7 +25,7 @@ CRDDM is designed for researchers in **cognitive science**, **mathematical psych
 ## **Features**
 **1. Support for diverse continuous response scales:**
 
-CRDDM supports a wide range of continuous-response scales commonly used in experimental research, including:
+JEAM supports a wide range of continuous-response scales commonly used in experimental research, including:
 
 - Circular scales (e.g., panels a, b, and c),
 - Bounded one-dimensional scales (e.g., panels d and e),
@@ -37,7 +37,7 @@ Examples of continuous-response decision tasks are illustrated below:
 
 **2. Time-dependent decision thresholds:**
 
-CRDDM supports diffusion models with time-dependent decision thresholds and enables likelihood estimation for models with arbitrary threshold dynamics. Specifically, the package includes:
+JEAM supports diffusion models with time-dependent decision thresholds and enables likelihood estimation for models with arbitrary threshold dynamics. Specifically, the package includes:
 
 - Fixed threshold,
 - Linear collapsing threshold,
@@ -50,7 +50,7 @@ This flexibility allows researchers to model urgency signals and dynamic decisio
 ---
 ## **Diffusion models of continuous-response taks**
 
-CRDDM includes four classes of multi-dimensional diffusion models, tailored to different response geometries:
+JEAM includes four classes of multi-dimensional diffusion models, tailored to different response geometries:
 
 - **Circular Diffusion Models** for experiments with circular response scales (e.g., panels a, b, and c in figure above),
 - **(Hyper-)Spherical Diffusion Models** for experiments with circular response scales (e.g., panels a, b, and c in figure above),
@@ -67,13 +67,13 @@ with support from [Dr. Nathan J Evans](https://scholar.google.com/citations?user
 
 When using this package or part of the code for your own research, I ask you to cite us:
 
-> Hadian Rasanan, A. H., Evans, N. J., and Rieskamp, J. (in prepration). Modeling Continuous-response Decisions with Multi-dimensional Diffusion Processes: A Tutorial
+> Hadian Rasanan, A. H., Evans, N. J., and Rieskamp, J. (in prepration). JEAM: A Python Package for Evidence Accumulation Modeling of Continuous Judgments
 
 *Also don't forget to cite the original paper for each model.* 
 
 - **Circular Diffusion Model**: Smith, P. L. (2016). Diffusion theory of decision making in continuous report. *Psychological Review*, 123(4), 425–451. [https://doi.org/10.1037/rev0000023](https://doi.org/10.1037/rev0000023)
 - **Hyper-spherical Diffusion Model**: Smith, P. L., & Corbett, E. A. (2019). Speeded multielement decision-making as diffusion in a hypersphere: Theory and application to double-target detection. *Psychonomic Bulletin & Review*, 26(1), 127-162. [https://doi.org/10.3758/s13423-018-1491-0](https://doi.org/10.3758/s13423-018-1491-0)
-- **Projected Spherical Diffusion Model**: Hadian Rasanan, A. H., Olschewski, S., & Rieskamp, J. (in prepration) The Projected Spherical Diffusion Model: A Theory of Evidence Accumulation for Continuous Estimation Tasks
+- **Projected Spherical Diffusion Model**: Hadian Rasanan, A. H., Olschewski, S., & Rieskamp, J. (2026) The Projected Spherical Diffusion Model: A Theory of Evidence Accumulation for Continuous Estimation Tasks. [https://doi.org/10.31234/osf.io/mhj6v_v1](https://doi.org/10.31234/osf.io/mhj6v_v1)
 - **Multi-dimensional Diffusion Models with Collapsing Decision Threshold**: Hadian Rasanan, A. H., Evans, N. J., Amani Rad, J., & Rieskamp, J. (2025). Parameter estimation of hyper-spherical diffusion models with a time-dependent threshold: An integral equation method. *Behavior Research Methods*, 57(10), 283. [https://doi.org/10.3758/s13428-025-02810-3](https://doi.org/10.3758/s13428-025-02810-3)
 
 ---

@@ -1,7 +1,7 @@
 # Design Specification: Condition-Specific Parameters (Speed–Accuracy Tradeoff)
 
 
-This tutorial demonstrates how to implement **design specifications** in CRDDM—that is, how experimental manipulations are translated into **condition-specific model parameters** within a single likelihood function.
+This tutorial demonstrates how to implement **design specifications** in JEAM—that is, how experimental manipulations are translated into **condition-specific model parameters** within a single likelihood function.
 
 In the example below (based on the accompanying notebook), we fit a **Circular Diffusion Model (CDM)**
 to data from an orientation judgment task reported in [Kvam (2019)](https://doi.org/10.1037/xhp0000606).
@@ -41,8 +41,8 @@ import matplotlib.pyplot as plt
 
 from scipy.optimize import differential_evolution
 
-from CRDDM.utility.datasets import load_kvam2019
-from CRDDM.Models.Circular import CircularDiffusionModel as CDM
+from jeam.utility.datasets import load_kvam2019
+from jeam.Models.Circular import CircularDiffusionModel as CDM
 ```
 
 ---

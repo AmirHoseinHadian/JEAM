@@ -3,7 +3,7 @@
 ### Install via `pip`
 The package can be installed via pip:
 ```bash
-pip istall crddm
+pip istall jeam
 ```
 ### Install from source
 Alternatively, clone or download the source code and install locally:
@@ -14,7 +14,7 @@ python -m setup.py
 ---
 
 ## Dependencies
-CRDDM requires the following Python packages:
+JEAM requires the following Python packages:
 
 - `numpy`
 - `scipy`
@@ -29,7 +29,7 @@ All dependencies are installed automatically when using `pip`.
 If you have Andaconda or miniconda installed and you would like to create a separate environment:
 
 ```bash
-conda create --n crddm python=3 numpy scipy pandas numba
-conda activate crddm
-pip install crddm
+conda create --n jeam python=3 numpy scipy pandas numba
+conda activate jeam
+pip install jeam
 ```

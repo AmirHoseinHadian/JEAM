@@ -13,7 +13,7 @@ To model this scenario, we use a **Projected Spherical Diffusion Model (PSDM)** 
 import numpy as np
 
 from scipy.optimize import differential_evolution
-from CRDDM.Models.Spherical import ProjectedSphericalDiffusionModel as PSDM
+from jeam.Models.Spherical import ProjectedSphericalDiffusionModel as PSDM
 ```
 
 (Optional, for visualization)
@@ -202,7 +202,7 @@ If the model is identifiable for this configuration and the optimizer converges 
 
 - Custom mapping functions enable flexible model specification for stimulus dependent modulation of the models parameters.
 - You can replace the utility model with any other mapping function, e.g. prospect theory, reference dependence, or regression-style mappings.
-- The same pattern extends naturally to other CRDDM models and other parameters of the models.
+- The same pattern extends naturally to other JEAM models and other parameters of the models.
 - A parameter recovery study based on the task design and mapping function is required to ensure that the parameters are identifiable.
 
 ---
