@@ -1,4 +1,4 @@
-name: Deploy documentation
+name: Deploy Documentation
 
 on:
   push:
@@ -15,19 +15,31 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
-          cache: pip
 
-      - name: Install package and documentation dependencies
+      - name: Install documentation dependencies
         run: |
           python -m pip install --upgrade pip
+          python -m pip install \
+            mkdocs \
+            mkdocs-material \
+            "mkdocstrings[python]" \
+            mkdocs-mermaid2-plugin \
+            pymdown-extensions
+
+      - name: Install JEAM
+        run: |
           python -m pip install -e .
-          python -m pip install -r requirements-docs.txt
+
+      - name: Build documentation
+        run: |
+          mkdocs build --strict
 
       - name: Deploy documentation
-        run: mkdocs gh-deploy --force
+        run: |
+          mkdocs gh-deploy --force
