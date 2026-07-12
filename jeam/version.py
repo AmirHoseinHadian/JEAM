@@ -25,41 +25,42 @@ CLASSIFIERS = ["Development Status :: 1 - Planning",
                "Topic :: Scientific/Engineering"]
 
 # Description should be a one-liner:
-description = "CRDDM: A package for modeling continuous response tasks using diffusion decision models"
+description = "JEAM: A package for evidence accumulation modeling of continuous judgment tasks"
+
 # Long description will go up on the pypi page
 long_description = """
 
-CRDDM
+JEAM
 ========
-``CRDDM`` is a Python package for modeling reponse time and choice in continuous 
-response tasks using diffusion decision models. 
+``JEAM`` is a Python package for evidence accumulation modeling of continuous 
+judgment tasks. 
 
 The main aim of this package is to provide an easy to ues implementation for the 
-likelihood functions of continuous response models. For the models that do not 
+likelihood functions of evidence accumulation models of continuous judgments. For the models that do not 
 have exact likelihood function we used an integral equaiton method.
 
 Documentation
 =============
-The latest documentation can be found here: https://crddm.readthedocs.io/
+The latest documentation can be found here: https://amirhoseinhadian.github.io/JEAM/
 
 License
 =======
-``CRDDM`` is licensed under the terms of the MIT license. See the file
+``JEAM`` is licensed under the terms of the MIT license. See the file
 "LICENSE" for information on the history of this software, terms & conditions
 for usage, and a DISCLAIMER OF ALL WARRANTIES.
 
 All trademarks referenced herein are property of their respective holders.
 
-Copyright (c) 2025--, Amir Hosein Hadian Rasanan,
+Copyright (c) 2026--, Amir Hosein Hadian Rasanan,
 University of Basel.
 """
 
-NAME = "CRDDM"
+NAME = "JEAM"
 MAINTAINER = "Amir Hosein Hadian Rasanan"
 MAINTAINER_EMAIL = "amir.h.hadian@gmail.com"
 DESCRIPTION = description
 LONG_DESCRIPTION = long_description
-URL = "https://github.com/amirhoseinhadian/crddm"
+URL = "https://github.com/AmirHoseinHadian/jeam"
 DOWNLOAD_URL = ""
 LICENSE = "MIT"
 AUTHOR = "Amir Hosein Hadian Rasanan"

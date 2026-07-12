@@ -3,9 +3,9 @@ import numpy as np
 from numba import jit
 from scipy.special import iv, ive
 
-from CRDDM.utility.helpers import iv_numba, ive_numba
-from CRDDM.utility.Constants import zeros_0, zeros_1, zeros_5
-from CRDDM.utility.Constants import JVZ1, JVZ2, JVZ5
+from jeam.utility.helpers import iv_numba, ive_numba
+from jeam.utility.Constants import zeros_0, zeros_1, zeros_5
+from jeam.utility.Constants import JVZ1, JVZ2, JVZ5
 
 # The firs-passage time distribution of zero-drift process for small RTs
 @jit(nopython=True)

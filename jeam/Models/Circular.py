@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 from scipy.special import iv
 
-from CRDDM.utility.helpers import trapz_1d
-from CRDDM.utility.simulators import simulate_CDM_trial, simulate_custom_threshold_CDM_trial
-from CRDDM.utility.fpts import cdm_short_t_fpt_z, cdm_long_t_fpt_z, ie_fpt_linear, ie_fpt_exponential, ie_fpt_hyperbolic, ie_fpt_custom
+from jeam.utility.helpers import trapz_1d
+from jeam.utility.simulators import simulate_CDM_trial, simulate_custom_threshold_CDM_trial
+from jeam.utility.fpts import cdm_short_t_fpt_z, cdm_long_t_fpt_z, ie_fpt_linear, ie_fpt_exponential, ie_fpt_hyperbolic, ie_fpt_custom
 
 class CircularDiffusionModel:
     '''

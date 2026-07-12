@@ -1,8 +1,8 @@
-site_name: CRDDM
+site_name: JEAM
 site_author: Amir Hosein Hadian
-site_description: Continuous Response Diffusion Decision Models (CRDDM) - documentation
-repo_name: AmirHoseinHadian/CRDDM
-repo_url: https://github.com/AmirHoseinHadian/CRDDM
+site_description: Evidence Accumulation Models of Continuous Judgments (JEAM) - documentation
+repo_name: AmirHoseinHadian/JEAM
+repo_url: https://github.com/AmirHoseinHadian/JEAM
 edit_uri: edit/main/docs/
 
 theme:

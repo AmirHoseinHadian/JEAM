@@ -1,12 +1,12 @@
 import os
 
-from CRDDM.version import *
+from jeam.version import *
 from setuptools import setup, find_packages
 
 PACKAGES = find_packages()
 
-# Get version and release info, which is all stored in CRDDM/version.py
-ver_file = os.path.join('CRDDM', 'version.py')
+# Get version and release info, which is all stored in jeam/version.py
+ver_file = os.path.join('jeam', 'version.py')
 with open(ver_file) as f:
     exec(f.read())
 
