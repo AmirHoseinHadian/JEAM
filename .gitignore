@@ -26,3 +26,6 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+#Site content folder
+site/
