@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../quickstart/">
+        <link rel="prev" href="../01_quickstart/">
       
       
-        <link rel="next" href="../mixture_models/">
+        <link rel="next" href="../03_mixture_models/">
       
       
         
@@ -249,7 +249,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../quickstart/" class="md-tabs__link">
+        <a href="../01_quickstart/" class="md-tabs__link">
           
   
   
@@ -475,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quickstart/" class="md-nav__link">
+      <a href="../01_quickstart/" class="md-nav__link">
         
   
   
@@ -683,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixture_models/" class="md-nav__link">
+      <a href="../03_mixture_models/" class="md-nav__link">
         
   
   
@@ -711,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom_mapping_function/" class="md-nav__link">
+      <a href="../04_custom_mapping_function/" class="md-nav__link">
         
   
   
@@ -739,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../collapsing_threshold_models/" class="md-nav__link">
+      <a href="../05_collapsing_threshold_models/" class="md-nav__link">
         
   
   
@@ -968,7 +968,7 @@
     
     
       <li class="md-path__item">
-        <a href="../quickstart/" class="md-path__link">
+        <a href="../01_quickstart/" class="md-path__link">
           
   <span class="md-ellipsis">
     Tutorials
@@ -993,7 +993,8 @@
   
 
 
-<h1 id="design-specification-condition-specific-parameters-speedaccuracy-tradeoff">Design Specification: Condition-Specific Parameters (Speed–Accuracy Tradeoff)</h1>
+<h1 id="design-specification-condition-specific-parameters-speedaccuracy-tradeoff">Design Specification: Condition-Specific Parameters (Speed–Accuracy Tradeoff) | <a href="https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></h1>
+<p><a href="https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb">View the notebook on GitHub</a></p>
 <p>This tutorial demonstrates how to implement <strong>design specifications</strong> in JEAM—that is, how experimental manipulations are translated into <strong>condition-specific model parameters</strong> within a single likelihood function.</p>
 <p>In the example below (based on the accompanying notebook), we fit a <strong>Circular Diffusion Model (CDM)</strong>
 to data from an orientation judgment task reported in <a href="https://doi.org/10.1037/xhp0000606">Kvam (2019)</a>.
@@ -1014,9 +1015,6 @@ of the stimulus by clicking on a circular response scale:</p>
 <p>This parameterization allows the model to capture systematic changes in response caution and evidence quality
 induced by task instructions and stimulus difficulty, while maintaining a parsimonious representation of
 shared decision dynamics.</p>
-<hr />
-<p><a href="https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
-<p><a href="https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb">View the notebook on GitHub</a></p>
 <hr />
 <h2 id="1-import-required-packages">1. Import required packages</h2>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
