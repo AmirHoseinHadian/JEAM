@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "jeam"
 version = "0.0.2"
-description = "Evidence accumulation models for judgment and continuous-response decisions"
+description = "Evidence accumulation models of continuous judgments"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
@@ -20,7 +20,10 @@ keywords = [
     "diffusion models",
     "decision making",
     "cognitive modeling",
-    "continuous response"
+    "continuous response",
+    "evidence accumulation models",
+    "judgment",
+    "response time",
 ]
 
 classifiers = [
