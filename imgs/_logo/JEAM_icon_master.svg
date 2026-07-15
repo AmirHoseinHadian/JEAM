@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>JEAM icon</title>
+  <path d="M 222 720 A 290 330 0 0 1 802 720"
+        fill="none" stroke="#062E73" stroke-width="56" stroke-linecap="round"/>
+  <polyline points="512,720 455,590 545,625 620,540 700,455"
+            fill="none" stroke="#07B3CF" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="512" cy="720" r="42" fill="#FFFFFF" stroke="#062E73" stroke-width="16"/>
+  <circle cx="455" cy="590" r="34" fill="#07B3CF"/>
+  <circle cx="545" cy="625" r="34" fill="#07B3CF"/>
+  <circle cx="620" cy="540" r="34" fill="#4A76D8"/>
+  <circle cx="700" cy="455" r="34" fill="#8D39CF"/>
+</svg>
