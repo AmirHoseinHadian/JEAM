@@ -1,4 +1,5 @@
-# Custom Mapping Function: Drift Angle Modulation Using Utility Theory
+# Custom Mapping Function: Drift Angle Modulation Using Utility Theory | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/04_Custom_Mapping_Function.ipynb)
+[View the notebook on GitHub](https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/04_Custom_Mapping_Function.ipynb)
 
 This tutorial demonstrates how to define a **custom mapping function** that maps **trial-wise stimuli** to **trial-wise model parameters**.  
 The example uses a pricing paradigm in which, on each trial, a participant evaluates a lottery that pays an outcome `x` with probability `p` (otherwise $0$) and reports a **willingness-to-pay (WTP)** on a bounded scale from $\$ 0$ to $\$ 20$.

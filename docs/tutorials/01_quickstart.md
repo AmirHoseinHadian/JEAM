@@ -1,10 +1,7 @@
-# Quick Start: Circular Diffusion Model
+# Quick Start: Circular Diffusion Model | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/01_Quick_Start.ipynb)
+[View the notebook on GitHub](https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/01_Quick_Start.ipynb)
 
 This tutorial demonstrates how to simulate data from a **Circular Diffusion Model (CDM)** and recover model parameters using likelihood-based estimation with JEAM.
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/01_Quick_Start.ipynb)
-
-[View the notebook on GitHub](https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/01_Quick_Start.ipynb)
 
 ## 1. Import required packages
 

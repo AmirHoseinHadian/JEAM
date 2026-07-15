@@ -1,5 +1,5 @@
-# Design Specification: Condition-Specific Parameters (Speed–Accuracy Tradeoff)
-
+# Design Specification: Condition-Specific Parameters (Speed–Accuracy Tradeoff) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb)
+[View the notebook on GitHub](https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb)
 
 This tutorial demonstrates how to implement **design specifications** in JEAM—that is, how experimental manipulations are translated into **condition-specific model parameters** within a single likelihood function.
 
@@ -24,12 +24,6 @@ To model these data, we specify a circular diffusion model with the following st
 This parameterization allows the model to capture systematic changes in response caution and evidence quality
 induced by task instructions and stimulus difficulty, while maintaining a parsimonious representation of
 shared decision dynamics.
-
----
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb)
-
-[View the notebook on GitHub](https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb)
 
 ---
 

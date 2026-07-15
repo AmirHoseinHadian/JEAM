@@ -30,23 +30,17 @@ nav:
   - Usage: usage.md
   - Installation: installation.md
   - Tutorials:
-      - Quickstart: tutorials/quickstart.md
-      - Design Specification: tutorials/design_spesification.md
-      - Mixture Models: tutorials/mixture_models.md
-      - Custom Mapping Function: tutorials/custom_mapping_function.md
-      - Collapsing Threshold Models: tutorials/collapsing_threshold_models.md
+      - Quickstart: tutorials/01_quickstart.md
+      - Design Specification: tutorials/02_design_spesification.md
+      - Mixture Models: tutorials/03_mixture_models.md
+      - Custom Mapping Function: tutorials/04_custom_mapping_function.md
+      - Collapsing Threshold Models: tutorials/05_collapsing_threshold_models.md
   - API Reference: api.md
 
 
 plugins:
   - search
   - mermaid2
-  
-  - mkdocs-jupyter:
-      execute: false
-      include_source: true
-      ignore_h1_titles: false
-
   - mkdocstrings:
       handlers:
         python:

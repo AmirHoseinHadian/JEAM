@@ -1,4 +1,5 @@
-# Collapsing Threshold Models: A Parameter Recovery Simulation
+# Collapsing Threshold Models: A Parameter Recovery Simulation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/05_Collapsing_Threshold_Models.ipynb)
+[View the notebook on GitHub](https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/05_Collapsing_Threshold_Models.ipynb)
 
 This tutorial illustrates how to use JEAM to fit **collapsing threshold diffusion models** and to fit a joint model on observed data from multiple sources (e.g., behavior and neural signals). 
 

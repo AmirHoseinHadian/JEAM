@@ -1,4 +1,5 @@
-# Mixture Process Models for Continuous-response Tasks
+# Mixture Process Models for Continuous-response Tasks | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/03_Mixture_Models.ipynb)
+[View the notebook on GitHub](https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/03_Mixture_Models.ipynb)
 
 Mixture process models are an important class of cognitive models for continuous-response tasks, and they have been widely used in the visual working memory literature. These models assume that observed responses arise from a mixture of distinct cognitive processes, such as memory-based responding and random guessing.
 
