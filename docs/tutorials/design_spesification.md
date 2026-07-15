@@ -27,6 +27,12 @@ shared decision dynamics.
 
 ---
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb)
+
+[View the notebook on GitHub](https://github.com/AmirHoseinHadian/JEAM/blob/main/docs/notebooks/02_Design_Spesification.ipynb)
+
+---
+
 ## 1. Import required packages
 
 

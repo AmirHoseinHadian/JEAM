@@ -35,8 +35,6 @@ nav:
       - Mixture Models: tutorials/mixture_models.md
       - Custom Mapping Function: tutorials/custom_mapping_function.md
       - Collapsing Threshold Models: tutorials/collapsing_threshold_models.md
-  - Notebooks:
-      - Simulation Notebooks: notebooks/01_Quick_Start.ipynb
   - API Reference: api.md
 
 
