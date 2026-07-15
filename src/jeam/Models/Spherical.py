@@ -32,13 +32,13 @@ class SphericalDiffusionModel:
 
         Parameters
         ----------
-        drift_vec : array-like
+        drift_vec : array-like, shape (3,) or (n_samples, 3)
             Drift vector; a three-dimensional array
-        ndt : float
+        ndt : float or array-like with the shape of (n_samples,)
             Non-decision time; a positive floating number
-        threshold : float
+        threshold : float or array-like with the shape of (n_samples,)
             Decision threshold; a positive floating number (default is 1)
-        decay : float, optional
+        decay : float or array-like with the shape of (n_samples,)
             Decay rate of the collapsing boundary (default is 0)
         threshold_function : callable, if threshold_dynamic is 'custom'
             A function that takes time t and returns the threshold at time t
@@ -105,7 +105,7 @@ class SphericalDiffusionModel:
         
         return pd.DataFrame(np.c_[RT, Choice], columns=['rt', 'response1', 'response2'])
 
-    def joint_lpdf(self, rt, theta, drift_vec, ndt, threshold, decay=0, threshold_function=None, dt_threshold_function=None, s_v=0, s_t=0, sigma=1, dt=0.01):
+    def joint_lpdf(self, rt, theta, drift_vec, ndt, threshold, decay=0, threshold_function=None, dt_threshold_function=None, s_v=0, s_t=0, sigma=1, approximation_step=0.01):
         '''
         Compute the joint log-probability density function of response time and choice angles
         
@@ -117,7 +117,7 @@ class SphericalDiffusionModel:
             The choice angles in spherical coordinates (theta1, theta2)
         drift_vec : array-like, shape (3,) or (n_samples, 3)
             The drift rates in each dimension
-        ndt : float
+        ndt : float or array-like, shape (n_samples,)
             The non-decision time
         threshold : float
             The decision threshold (default is 1)
@@ -133,7 +133,7 @@ class SphericalDiffusionModel:
             The standard deviation of non-decision time variability (default is 0)
         sigma : float, optional
             The diffusion coefficient (default is 1)
-        dt : float, optional
+        approximation_step : float, optional
             The time step for numerical estimation of first-passage time densities (default is 0.01)
 
         Returns
@@ -170,21 +170,21 @@ class SphericalDiffusionModel:
         elif self.threshold_dynamic == 'linear':
             a = threshold - decay*tt
             T_max = min(rt.max(), threshold/decay)
-            g_z, T = ie_fpt_linear(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=dt, T_max=T_max)
+            g_z, T = ie_fpt_linear(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=approximation_step, T_max=T_max)
             fpt_z = np.interp(tt, T, g_z)
         elif self.threshold_dynamic == 'exponential':
             a = threshold * np.exp(-decay*tt)
-            g_z, T = ie_fpt_exponential(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=dt, T_max=rt.max())
+            g_z, T = ie_fpt_exponential(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=approximation_step, T_max=rt.max())
             fpt_z = np.interp(tt, T, g_z)
         elif self.threshold_dynamic == 'hyperbolic':
             a = threshold / (1 + decay*tt)
-            g_z, T = ie_fpt_hyperbolic(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=dt, T_max=rt.max())
+            g_z, T = ie_fpt_hyperbolic(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=approximation_step, T_max=rt.max())
             fpt_z = np.interp(tt, T, g_z)
         elif self.threshold_dynamic == 'custom':
             threshold_function2 = lambda t: threshold_function(t)**2
             dt_threshold_function2 = lambda t: 2 * dt_threshold_function(t) * threshold_function(t)
             a = threshold_function(tt)
-            g_z, T = ie_fpt_custom(threshold_function2, dt_threshold_function2, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=dt, T_max=rt.max())
+            g_z, T = ie_fpt_custom(threshold_function2, dt_threshold_function2, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=approximation_step, T_max=rt.max())
             fpt_z = np.interp(tt, T, g_z)
 
         fpt_z = np.maximum(fpt_z, 0.1**14)
@@ -308,13 +308,13 @@ class ProjectedSphericalDiffusionModel:
 
         Parameters
         ----------
-        drift_vec : array-like
-            The drift vector should be of shape (2,)
-        ndt : float
+        drift_vec : array-like, shape (2,) or (n_samples, 2)
+            The drift vector [drift_x, drift_y]. Note that drift_y must be non-negative, as it represents the projection onto the upper half-plane.
+        ndt : float or array-like with the shape of (n_samples,)
             The non-decision time
-        threshold : float
+        threshold : float or array-like with the shape of (n_samples,)
             The decision threshold (default is 1)
-        decay : float, optional
+        decay : float or array-like with the shape of (n_samples,)
             The threshold decay rate (default is 0)
         threshold_function : callable, if threshold_dynamic is 'custom'
             A function that takes time t and returns the threshold at time t
@@ -381,7 +381,7 @@ class ProjectedSphericalDiffusionModel:
 
         return pd.DataFrame(np.c_[RT, Choice], columns=['rt', 'response'])
     
-    def joint_lpdf(self, rt, theta, drift_vec, ndt, threshold, decay=0, threshold_function=None, dt_threshold_function=None, s_v=0, s_t=0, sigma=1, dt=0.01):
+    def joint_lpdf(self, rt, theta, drift_vec, ndt, threshold, decay=0, threshold_function=None, dt_threshold_function=None, s_v=0, s_t=0, sigma=1, approximation_step=0.01):
         '''
         Compute the joint log-probability density function of response time and choice angle
 
@@ -393,7 +393,7 @@ class ProjectedSphericalDiffusionModel:
             The choice angles in radians
         drift_vec : array-like, shape (2,) or (n_samples, 2)
             The drift vector [drift_x, drift_y]
-        ndt : float
+        ndt : float or array-like, shape (n_samples,)
             The non-decision time
         threshold : float
             The decision threshold (default is 1)
@@ -409,7 +409,7 @@ class ProjectedSphericalDiffusionModel:
             The standard deviation of non-decision time variability (default is 0)
         sigma : float, optional
             The diffusion coefficient (default is 1)
-        dt : float, optional
+        approximation_step : float, optional
             The time step for numerical estimation of first-passage time densities (default is 0.01)
 
         Returns
@@ -446,21 +446,21 @@ class ProjectedSphericalDiffusionModel:
         elif self.threshold_dynamic == 'linear':
             a = threshold - decay*tt
             T_max = min(rt.max(), threshold/decay)
-            g_z, T = ie_fpt_linear(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=dt, T_max=T_max)
+            g_z, T = ie_fpt_linear(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=approximation_step, T_max=T_max)
             fpt_z = np.interp(tt, T, g_z)
         elif self.threshold_dynamic == 'exponential':
             a = threshold * np.exp(-decay*tt)
-            g_z, T = ie_fpt_exponential(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=dt, T_max=rt.max())
+            g_z, T = ie_fpt_exponential(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=approximation_step, T_max=rt.max())
             fpt_z = np.interp(tt, T, g_z)
         elif self.threshold_dynamic == 'hyperbolic':
             a = threshold / (1 + decay*tt)
-            g_z, T = ie_fpt_hyperbolic(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=dt, T_max=rt.max())
+            g_z, T = ie_fpt_hyperbolic(threshold, decay, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=approximation_step, T_max=rt.max())
             fpt_z = np.interp(tt, T, g_z)
         elif self.threshold_dynamic == 'custom':
             threshold_function2 = lambda t: threshold_function(t)**2
             dt_threshold_function2 = lambda t: 2 * dt_threshold_function(t) * threshold_function(t)
             a = threshold_function(tt)
-            g_z, T = ie_fpt_custom(threshold_function2, dt_threshold_function2, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=dt, T_max=rt.max())
+            g_z, T = ie_fpt_custom(threshold_function2, dt_threshold_function2, 3*sigma**2, 0.000001, sigma=2*sigma**2, dt=approximation_step, T_max=rt.max())
             fpt_z = np.interp(tt, T, g_z)
 
         fpt_z = np.maximum(fpt_z, 0.1**14)
