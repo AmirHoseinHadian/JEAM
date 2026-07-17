@@ -67,9 +67,9 @@ JEAM includes four classes of multi-dimensional diffusion models, tailored to di
 This package was developed by me, [Amir Hosein Hadian Rasanan](https://scholar.google.com/citations?hl=en&user=qbOoaykAAAAJ),
 with support from [Dr. Nathan J Evans](https://scholar.google.com/citations?user=2hG7r90AAAAJ&hl=en) and [Prof. Dr. Jörg Rieskamp](https://scholar.google.com/citations?user=6Y5X1xUAAAAJ&hl=en). 
 
-When using this package or part of the code for your own research, I ask you to cite us:
+When using this package or part of the code for your own research, we ask you to cite us:
 
-> Hadian Rasanan, A. H., Evans, N. J., and Rieskamp, J. (in prepration). JEAM: A Python Package for Evidence Accumulation Modeling of Continuous Judgments
+> Hadian Rasanan, A. H., Evans, N. J., and Rieskamp, J. (2026). JEAM: A Framework and Tutorial for Applying Evidence Accumulation Models to Continuous Judgments
 
 *Also don't forget to cite the original paper for each model.* 
 

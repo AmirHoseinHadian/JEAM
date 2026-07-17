@@ -6,9 +6,9 @@ The package can be installed via pip:
 pip istall jeam
 ```
 ### Install from source
-Alternatively, clone or download the source code and install locally:
+Alternatively, the latest version of the package can be installed directly from Gihub repository:
 ```bash
-python -m setup.py
+pip install git+https://github.com/AmirHoseinHadian/JEAM.git
 ```
 
 ---
@@ -20,6 +20,7 @@ JEAM requires the following Python packages:
 - `scipy`
 - `pandas`
 - `numba`
+- `mpmath`
 
 All dependencies are installed automatically when using `pip`.
 
@@ -29,7 +30,7 @@ All dependencies are installed automatically when using `pip`.
 If you have Andaconda or miniconda installed and you would like to create a separate environment:
 
 ```bash
-conda create --n jeam python=3 numpy scipy pandas numba
-conda activate jeam
+conda create --name jeam_env python=3
+conda activate jeam_env
 pip install jeam
 ```
