@@ -1,5 +1,5 @@
-<div style="text-align: center">
-    <img src="docs/imgs/_logo/JEAM_logo.svg" alt="JEAM logo" width="400">
+<div align="center">
+  <img src="docs/imgs/_logo/JEAM_logo.svg" alt="JEAM logo" width="400">
 </div>
 
 JEAM is a Python package for evidence accumulation modeling of continuous judgment tasks. 
