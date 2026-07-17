@@ -20,9 +20,9 @@ The package can be installed via pip:
 pip istall jeam
 ```
 ### Install from source
-Alternatively, clone or download the source code and install locally:
+Alternatively, the latest version of the package can be installed directly from Gihub repository:
 ```bash
-python -m setup.py
+pip install git+https://github.com/AmirHoseinHadian/JEAM.git
 ```
 
 ---
@@ -34,6 +34,7 @@ JEAM requires the following Python packages:
 - `scipy`
 - `pandas`
 - `numba`
+- `mpmath`
 
 All dependencies are installed automatically when using `pip`.
 
@@ -43,14 +44,23 @@ All dependencies are installed automatically when using `pip`.
 If you have Andaconda or miniconda installed and you would like to create a separate environment:
 
 ```bash
-conda create --n jeam python=3 numpy scipy pandas numba
-conda activate jeam
+conda create --name jeam_env python=3
+conda activate jeam_env
 pip install jeam
 ```
 
 ## Documentation
 
 The latest documentation can be found here: **[amirhoseinhadian.github.io/JEAM/](https://amirhoseinhadian.github.io/JEAM/)**
+
+## Credits
+
+This package was developed by me, [Amir Hosein Hadian Rasanan](https://scholar.google.com/citations?hl=en&user=qbOoaykAAAAJ),
+with support from [Dr. Nathan J Evans](https://scholar.google.com/citations?user=2hG7r90AAAAJ&hl=en) and [Prof. Dr. Jörg Rieskamp](https://scholar.google.com/citations?user=6Y5X1xUAAAAJ&hl=en). 
+
+When using this package or part of the code for your own research, I ask you to cite us:
+
+> Hadian Rasanan, A. H., Evans, N. J., and Rieskamp, J. (2026). JEAM: A Framework and Tutorial for Applying Evidence Accumulation Models to Continuous Judgments
 
 ---
 
