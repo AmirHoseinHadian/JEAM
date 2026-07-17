@@ -68,10 +68,10 @@ When using this package or part of the code for your own research, I ask you to 
 
 For background on diffusion models for continuous response tasks and the estimation methods implemented in JEAM, see:
 
-- Hadian Rasanan, A. H., Evans, N. J., Amani Rad, J., & Rieskamp, J. (2025). Parameter estimation of hyper-spherical diffusion models with a time-dependent threshold: An integral equation method. Behavior research methods, 57(10), 283. https://doi.org/10.3758/s13428-025-02810-3
+- Hadian Rasanan, A. H., Evans, N. J., Amani Rad, J., & Rieskamp, J. (2025). Parameter estimation of hyper-spherical diffusion models with a time-dependent threshold: An integral equation method. *Behavior Research Methods*, 57(10), 283. https://doi.org/10.3758/s13428-025-02810-3
 
 - Hadian Rasanan, A. H., Olschewski, S., & Rieskamp, J. (2026). The Projected Spherical Diffusion Model: An Evidence Accumulation Theory for Estimation. https://doi.org/10.31234/osf.io/mhj6v_v1
 
-- Smith, P. L. (2016). Diffusion theory of decision making in continuous report. Psychological Review, 123 (4), 425–451, https://doi.org/10.1037/rev0000023
+- Smith, P. L. (2016). Diffusion theory of decision making in continuous report. *Psychological Review*, 123 (4), 425–451, https://doi.org/10.1037/rev0000023
 
-- Smith, P.L., & Corbett, E.A. (2019). Speeded multielement decision-making as diffusion in a hypersphere: Theory and application to double-target detection. Psychonomic Bulletin & Review, 26, https://doi.org/10.3758/s13423-018-1491-0
+- Smith, P.L., & Corbett, E.A. (2019). Speeded multielement decision-making as diffusion in a hypersphere: Theory and application to double-target detection. *Psychonomic Bulletin & Review*, 26, https://doi.org/10.3758/s13423-018-1491-0
