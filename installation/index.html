@@ -846,8 +846,8 @@
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>istall<span class="w"> </span>jeam
 </code></pre></div></p>
 <h3 id="install-from-source">Install from source</h3>
-<p>Alternatively, clone or download the source code and install locally:
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>setup.py
+<p>Alternatively, the latest version of the package can be installed directly from Gihub repository:
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/AmirHoseinHadian/JEAM.git
 </code></pre></div></p>
 <hr />
 <h2 id="dependencies">Dependencies</h2>
@@ -857,13 +857,14 @@
 <li><code>scipy</code></li>
 <li><code>pandas</code></li>
 <li><code>numba</code></li>
+<li><code>mpmath</code></li>
 </ul>
 <p>All dependencies are installed automatically when using <code>pip</code>.</p>
 <hr />
 <h3 id="conda-environment-suggested">Conda environment (suggested)</h3>
 <p>If you have Andaconda or miniconda installed and you would like to create a separate environment:</p>
-<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>--n<span class="w"> </span>jeam<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span><span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>pandas<span class="w"> </span>numba
-conda<span class="w"> </span>activate<span class="w"> </span>jeam
+<div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>jeam_env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>
+conda<span class="w"> </span>activate<span class="w"> </span>jeam_env
 pip<span class="w"> </span>install<span class="w"> </span>jeam
 </code></pre></div>
 
