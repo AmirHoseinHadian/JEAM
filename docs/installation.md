@@ -3,7 +3,7 @@
 ### Install via `pip`
 The package can be installed via pip:
 ```bash
-pip istall jeam
+pip install jeam
 ```
 ### Install from source
 Alternatively, the latest version of the package can be installed directly from Gihub repository:
